@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<body style="width: 676px">
+<body style="width: 691px">
     <form id="form1" runat="server">
     <div>
     
@@ -34,47 +34,61 @@
             <tr>
                 <td class="auto-style1">UserName</td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox1" runat="server" Height="27px" Width="168px"></asp:TextBox>
+                    <asp:TextBox ID="txtUserName" runat="server" Height="27px" Width="168px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter Name"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Password</td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox2" runat="server" Height="23px" Width="169px"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" Height="23px" Width="169px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Password"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style3">Confirm Password</td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="TextBox3" runat="server" Height="28px" Width="173px"></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" Height="28px" Width="173px"></asp:TextBox>
                     <br />
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password must be Same" ForeColor="#CC0000"></asp:CompareValidator>
                 </td>
-                <td class="auto-style5"></td>
+                <td class="auto-style5">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Confirm Password"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Gender</td>
                 <td class="auto-style2">
-                    <asp:RadioButton ID="rdoMale" runat="server" Text="Male" />
-                    <asp:RadioButton ID="rdoFemale" runat="server" Text="Female" />
-                    <asp:RadioButton ID="rdoOthers" runat="server" Text="Others" />
+                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem>Male</asp:ListItem>
+                        <asp:ListItem>Female</asp:ListItem>
+                        <asp:ListItem>Others</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Select Gender"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">Course</td>
                 <td class="auto-style2">
-                    <asp:CheckBox ID="CheckBox1" runat="server" />
-                    <asp:CheckBox ID="CheckBox2" runat="server" />
-                    <asp:CheckBox ID="CheckBox3" runat="server" EnableTheming="True" />
+                    <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+                        <asp:ListItem>PHP</asp:ListItem>
+                        <asp:ListItem>CSharp</asp:ListItem>
+                        <asp:ListItem>HTML</asp:ListItem>
+                    </asp:CheckBoxList>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Custom Validator"></asp:CustomValidator>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnRegister" runat="server" Text="Register" />
+                <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

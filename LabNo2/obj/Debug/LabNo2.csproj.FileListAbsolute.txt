@@ -3,3 +3,4 @@ D:\C#\LabNo2\LabNo2\bin\LabNo2.dll
 D:\C#\LabNo2\LabNo2\bin\LabNo2.pdb
 D:\C#\LabNo2\LabNo2\obj\Debug\LabNo2.dll
 D:\C#\LabNo2\LabNo2\obj\Debug\LabNo2.pdb
+D:\C#\LabNo2\LabNo2\obj\Debug\LabNo2.csprojResolveAssemblyReference.cache
